@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F3BC8D08-924E-43E6-8CEA-847289A806CB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyThietBi</RootNamespace>
+    <AssemblyName>QuanLyThietBi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountsForm.Designer.cs">
+      <DependentUpon>AccountsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddAccountsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAccountsForm.Designer.cs">
+      <DependentUpon>AddAccountsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDeviceForm.Designer.cs">
+      <DependentUpon>AddDeviceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDTrackingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDTrackingForm.Designer.cs">
+      <DependentUpon>AddDTrackingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDUsedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDUsedForm.Designer.cs">
+      <DependentUpon>AddDUsedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEmployerUnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployerUnitForm.Designer.cs">
+      <DependentUpon>AddEmployerUnitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStaffForm.Designer.cs">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTODForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTODForm.Designer.cs">
+      <DependentUpon>AddTODForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DamagedDeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DamagedDeviceForm.Designer.cs">
+      <DependentUpon>DamagedDeviceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DamageDeviceforAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DamageDeviceforAdmin.Designer.cs">
+      <DependentUpon>DamageDeviceforAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\ChiTietPhieuDeXuatDAO.cs" />
+    <Compile Include="DAO\ChiTietPhieuNhapDAO.cs" />
+    <Compile Include="DAO\ChiTietPhieuSuaChuaDAO.cs" />
+    <Compile Include="DAO\DonViDAO.cs" />
+    <Compile Include="DAO\LienKetCSDL.cs" />
+    <Compile Include="DAO\LKDL.cs" />
+    <Compile Include="DAO\LoaiThietBiDAO.cs" />
+    <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\PhieuDeXuatDAO.cs" />
+    <Compile Include="DAO\PhieuNhapDAO.cs" />
+    <Compile Include="DAO\PhieuSuaChuaDAO.cs" />
+    <Compile Include="DAO\TaiKhoanDAO.cs" />
+    <Compile Include="DAO\TheoDoiThietBiDAO.cs" />
+    <Compile Include="DAO\ThietBiDAO.cs" />
+    <Compile Include="DAO\ThietBiSuDungDAO.cs" />
+    <Compile Include="DeviceDeliveryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceDeliveryForm.Designer.cs">
+      <DependentUpon>DeviceDeliveryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceForm.Designer.cs">
+      <DependentUpon>DeviceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceOfferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceOfferForm.Designer.cs">
+      <DependentUpon>DeviceOfferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceOfferforStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceOfferforStaff.Designer.cs">
+      <DependentUpon>DeviceOfferforStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceTrackingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceTrackingForm.Designer.cs">
+      <DependentUpon>DeviceTrackingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceUsedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceUsedForm.Designer.cs">
+      <DependentUpon>DeviceUsedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\ChiTietPhieuDeXuat.cs" />
+    <Compile Include="DTO\ChiTietPhieuNhap.cs" />
+    <Compile Include="DTO\ChiTietPhieuSuaChua.cs" />
+    <Compile Include="DTO\DonVi.cs" />
+    <Compile Include="DTO\LoaiThietBi.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="DTO\PDX.cs" />
+    <Compile Include="DTO\PhieuDeXuat.cs" />
+    <Compile Include="DTO\PhieuNhap.cs" />
+    <Compile Include="DTO\PhieuSuaChua.cs" />
+    <Compile Include="DTO\TaiKhoan.cs" />
+    <Compile Include="DTO\TheoDoiThietBi.cs" />
+    <Compile Include="DTO\ThietBi.cs" />
+    <Compile Include="DTO\ThietBiSuDung.cs" />
+    <Compile Include="EmployerUnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployerUnitForm.Designer.cs">
+      <DependentUpon>EmployerUnitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffForm.Designer.cs">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeOfDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypeOfDForm.Designer.cs">
+      <DependentUpon>TypeOfDForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountsForm.resx">
+      <DependentUpon>AccountsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddAccountsForm.resx">
+      <DependentUpon>AddAccountsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDeviceForm.resx">
+      <DependentUpon>AddDeviceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDTrackingForm.resx">
+      <DependentUpon>AddDTrackingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDUsedForm.resx">
+      <DependentUpon>AddDUsedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEmployerUnitForm.resx">
+      <DependentUpon>AddEmployerUnitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStaffForm.resx">
+      <DependentUpon>AddStaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTODForm.resx">
+      <DependentUpon>AddTODForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DamagedDeviceForm.resx">
+      <DependentUpon>DamagedDeviceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DamageDeviceforAdmin.resx">
+      <DependentUpon>DamageDeviceforAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceDeliveryForm.resx">
+      <DependentUpon>DeviceDeliveryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceForm.resx">
+      <DependentUpon>DeviceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceOfferForm.resx">
+      <DependentUpon>DeviceOfferForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceOfferforStaff.resx">
+      <DependentUpon>DeviceOfferforStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceTrackingForm.resx">
+      <DependentUpon>DeviceTrackingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeviceUsedForm.resx">
+      <DependentUpon>DeviceUsedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployerUnitForm.resx">
+      <DependentUpon>EmployerUnitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StaffForm.resx">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeOfDForm.resx">
+      <DependentUpon>TypeOfDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29938 [Converted].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundmainform.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male_200px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_512px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
